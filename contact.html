@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Contact Us | WealthWise</title>
+    <meta name="description"
+        content="Get in touch with WealthWise. Contact our team for questions about budget analysis, investment insights, or collaboration opportunities.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header" id="main-header">
+        <div class="header-container">
+            <div class="logo"><a href="index.html"><span class="logo-icon">📊</span><span class="logo-text">Wealth<span
+                            class="logo-accent">Wise</span></span></a></div>
+            <nav class="main-nav" id="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="railways.html" class="nav-link">Railways</a></li>
+                    <li><a href="tax.html" class="nav-link">Tax Guide</a></li>
+                    <li><a href="infra.html" class="nav-link">Infrastructure</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="index.html#newsletter" class="btn-subscribe">Subscribe</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn"
+                    aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-layout">
+        <div class="content-wrapper">
+            <article class="main-content article-page contact-page" id="main-content">
+                <div class="article-header">
+                    <h1 class="article-title">Get in Touch</h1>
+                    <p class="article-subtitle">We value your feedback and inquiries</p>
+                </div>
+
+                <div class="article-body">
+                    <p class="lead">Whether you have a question about our budget analysis, want to collaborate on
+                        content, or simply want to share your feedback, we are here to help.</p>
+
+                    <div class="contact-grid">
+                        <div class="contact-card">
+                            <span class="contact-icon">📧</span>
+                            <h3>Email Us</h3>
+                            <p>For general inquiries and support:</p>
+                            <a href="mailto:support@wealthwise.io" class="contact-link">support@wealthwise.io</a>
+                        </div>
+
+                        <div class="contact-card">
+                            <span class="contact-icon">⏱️</span>
+                            <h3>Response Time</h3>
+                            <p>We aim to respond to all inquiries within:</p>
+                            <span class="response-time">24-48 hours</span>
+                        </div>
+
+                        <div class="contact-card">
+                            <span class="contact-icon">📍</span>
+                            <h3>Our Location</h3>
+                            <p>WealthWise Media Pvt. Ltd.</p>
+                            <address>
+                                Guwahati, Assam<br>
+                                India
+                            </address>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-section">
+                        <h2>Send Us a Message</h2>
+                        <form class="contact-form" id="contact-form" method="POST"
+                            action="https://your-form-service.com/submit">
+                            <div class="form-group">
+                                <label for="name">Your Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="Enter your email">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a topic</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="collaboration">Collaboration</option>
+                                    <option value="advertising">Advertising</option>
+                                    <option value="technical">Technical Issue</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Your Message *</label>
+                                <textarea id="message" name="message" rows="6" required
+                                    placeholder="Tell us how we can help you..."></textarea>
+                            </div>
+
+                            <!-- Honeypot for spam protection -->
+                            <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+
+                            <button type="submit" class="submit-btn">Send Message →</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-faq">
+                        <h2>Frequently Asked Questions</h2>
+
+                        <div class="faq-item">
+                            <h3>How can I subscribe to your newsletter?</h3>
+                            <p>You can subscribe using the form in our sidebar or by visiting our <a
+                                    href="index.html#newsletter">homepage newsletter section</a>.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>Do you offer personalized investment advice?</h3>
+                            <p>WealthWise provides educational content only. For personalized advice, please consult a
+                                SEBI-registered investment advisor.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>How can I advertise on WealthWise?</h3>
+                            <p>For advertising inquiries, please email us at <a
+                                    href="mailto:support@wealthwise.io">support@wealthwise.io</a> with "Advertising" in
+                                the subject line.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <aside class="sidebar" id="sidebar">
+                <div class="sidebar-widget newsletter-widget" id="newsletter">
+                    <div class="widget-header"><span class="widget-icon">✉️</span>
+                        <h3>Weekly Digest</h3>
+                    </div>
+                    <p>Get exclusive investment insights delivered to your inbox.</p>
+                    <form class="newsletter-form" method="POST" action="https://your-email-service.com/api/subscribe">
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe Free</button>
+                    </form>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">📋 Quick Links</h3>
+                    <ul class="popular-list">
+                        <li class="popular-item">
+                            <div class="popular-content"><a href="about.html">About Us</a></div>
+                        </li>
+                        <li class="popular-item">
+                            <div class="popular-content"><a href="privacy.html">Privacy Policy</a></div>
+                        </li>
+                        <li class="popular-item">
+                            <div class="popular-content"><a href="index.html">Back to Home</a></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Google AdSense Placeholder -->
+                <div class="sidebar-widget ad-widget">
+                    <div class="ad-label">Advertisement</div>
+                    <ins class="adsbygoogle" style="display:block; min-height:250px;"
+                        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1234567890" data-ad-format="rectangle"
+                        data-full-width-responsive="true"></ins>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="disclaimer"><strong>Disclaimer:</strong> Information provided is for educational purposes
+                    only. Consult a qualified advisor before making investment decisions.</p>
+                <p class="copyright">© 2026 WealthWise. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
