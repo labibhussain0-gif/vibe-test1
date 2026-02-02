@@ -1,0 +1,128 @@
+# GitHub Actions Workflow for WealthWise - GitHub Pages Deployment
+# Includes HTML, CSS, and JS minification for optimal performance
+
+name: Deploy WealthWise to GitHub Pages
+
+on:
+  # Runs on pushes to main branch
+  push:
+    branches: ["main"]
+  
+  # Allows manual trigger from Actions tab
+  workflow_dispatch:
+
+# Sets permissions for GitHub Pages deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Build job - Minify assets and prepare for deployment
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install minification tools
+        run: |
+          npm install -g html-minifier-terser terser clean-css-cli
+
+      - name: Create output directory
+        run: mkdir -p dist
+
+      - name: Minify HTML files
+        run: |
+          for file in *.html; do
+            if [ -f "$file" ]; then
+              html-minifier-terser \
+                --collapse-whitespace \
+                --remove-comments \
+                --remove-optional-tags \
+                --remove-redundant-attributes \
+                --remove-script-type-attributes \
+                --remove-style-link-type-attributes \
+                --use-short-doctype \
+                --minify-css true \
+                --minify-js true \
+                "$file" -o "dist/$file"
+              echo "✓ Minified: $file"
+            fi
+          done
+
+      - name: Minify CSS files
+        run: |
+          for file in *.css; do
+            if [ -f "$file" ]; then
+              cleancss -o "dist/$file" "$file"
+              echo "✓ Minified: $file"
+            fi
+          done
+
+      - name: Minify JavaScript files
+        run: |
+          for file in *.js; do
+            if [ -f "$file" ]; then
+              terser "$file" \
+                --compress \
+                --mangle \
+                --output "dist/$file"
+              echo "✓ Minified: $file"
+            fi
+          done
+
+      - name: Copy other assets (images, fonts, etc.)
+        run: |
+          # Copy any additional assets if they exist
+          if [ -d "images" ]; then cp -r images dist/; fi
+          if [ -d "assets" ]; then cp -r assets dist/; fi
+          if [ -d "fonts" ]; then cp -r fonts dist/; fi
+          if [ -f "favicon.ico" ]; then cp favicon.ico dist/; fi
+          if [ -f "robots.txt" ]; then cp robots.txt dist/; fi
+          if [ -f "sitemap.xml" ]; then cp sitemap.xml dist/; fi
+
+      - name: Display build summary
+        run: |
+          echo "📦 Build complete! Files in dist:"
+          ls -la dist/
+          echo ""
+          echo "📊 Size comparison:"
+          for file in *.html *.css *.js; do
+            if [ -f "$file" ] && [ -f "dist/$file" ]; then
+              original=$(wc -c < "$file")
+              minified=$(wc -c < "dist/$file")
+              savings=$((100 - (minified * 100 / original)))
+              echo "$file: ${original}B → ${minified}B (${savings}% smaller)"
+            fi
+          done
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact for deployment
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'dist'
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

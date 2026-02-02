@@ -1,202 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Vibe</title>
-    <style>
-        :root {
-            --bg-color: #0a0a0a;
-            --text-color: #f0f0f0;
-            --neon-color: #00f3ff;
-            --neon-secondary: #ff00ff;
-            --font-main: 'Segoe UI', Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
-        }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <!-- SEO Meta Tags -->
+    <title>2026 Budget Investment Analysis | Defence Budget Hike & STT Tax Changes | WealthWise</title>
+    <meta name="description"
+        content="Expert analysis of India's 2026 Union Budget: Defence budget hiked 12.9% to ₹6.21 lakh crore, STT doubled on F&O trades. Get actionable investment insights from certified financial professionals.">
+    <meta name="keywords"
+        content="2026 budget, defence budget, STT tax, investment analysis, stock market, financial planning, mutual funds, portfolio management">
+    <meta name="author" content="WealthWise Financial Experts">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wealthwise.com/2026-budget-analysis">
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: var(--font-main);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            overflow-y: auto;
-            padding: 2rem 0;
-            background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
-        }
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="2026 Budget Investment Analysis | WealthWise">
+    <meta property="og:description"
+        content="Expert analysis of India's 2026 Union Budget: Defence budget hiked 12.9%, STT doubled on F&O trades. Actionable investment insights.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://wealthwise.com/2026-budget-analysis">
+    <meta property="og:image" content="https://wealthwise.com/images/2026-budget-og.jpg">
+    <meta property="og:site_name" content="WealthWise">
 
-        .container {
-            text-align: center;
-            padding: 2.5rem;
-            max-width: 500px;
-            width: 90%;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        }
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="2026 Budget Investment Analysis | WealthWise">
+    <meta name="twitter:description"
+        content="Defence budget hiked 12.9%, STT doubled on F&O. Expert investment insights for 2026.">
+    <meta name="twitter:image" content="https://wealthwise.com/images/2026-budget-twitter.jpg">
 
-        h1 {
-            font-size: 3.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.4rem;
-            color: #fff;
-            margin-bottom: 1.5rem;
-            font-weight: 900;
-            text-shadow: 
-                0 0 5px #fff,
-                0 0 10px #fff,
-                0 0 20px var(--neon-color),
-                0 0 40px var(--neon-color),
-                0 0 80px var(--neon-color);
-            animation: glow 2s ease-in-out infinite alternate;
-        }
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
 
-        @keyframes glow {
-            from {
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px var(--neon-color), 0 0 40px var(--neon-color);
-            }
-            to {
-                text-shadow: 0 0 10px #fff, 0 0 20px var(--neon-color), 0 0 40px var(--neon-color), 0 0 60px var(--neon-color), 0 0 100px var(--neon-color);
-            }
-        }
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
 
-        .bio {
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 2.5rem;
-            color: #b0b0b0;
-            font-weight: 300;
-        }
-
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .btn {
-            text-decoration: none;
-            color: #fff;
-            border: 2px solid var(--neon-secondary);
-            padding: 0.8rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 500;
-            letter-spacing: 0.1rem;
-            text-transform: uppercase;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            background: rgba(255, 255, 255, 0.05);
-            box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
-        }
-
-        .btn:hover {
-            transform: translateY(-5px);
-            background: var(--neon-color);
-            color: var(--bg-color);
-            box-shadow: 0 0 30px rgba(0, 243, 255, 0.4);
-            border-color: var(--neon-color);
-        }
-
-        /* Decorative Background Elements */
-        .glow-sphere {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: var(--neon-color);
-            filter: blur(150px);
-            border-radius: 50%;
-            opacity: 0.1;
-            z-index: -1;
-            top: 10%;
-            left: 10%;
-        }
-
-        .contact-section {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .contact-section h2 {
-            font-size: 1.5rem;
-            color: var(--neon-secondary);
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.2rem;
-            text-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
-        }
-
-        .form-group {
-            margin-bottom: 1.2rem;
-            text-align: left;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 12px 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 2px solid var(--neon-secondary);
-            border-radius: 10px;
-            color: #fff;
-            font-family: var(--font-main);
-            transition: all 0.3s ease;
-            outline: none;
-        }
-
-        input:focus, textarea:focus {
-            box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
-            background: rgba(255, 255, 255, 0.08);
-            transform: scale(1.02);
-        }
-
-        ::placeholder {
-            color: rgba(255, 255, 255, 0.3);
-        }
-
-        .submit-btn {
-            width: 100%;
-            cursor: pointer;
-            margin-top: 1rem;
-        }
-    </style>
+    <!-- Google AdSense Publisher Script -->
+    <!-- TODO: Replace with your AdSense Publisher ID -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
 </head>
-<body>
-    <div class="glow-sphere"></div>
-    <div class="container">
-        <h1>The Vibe</h1>
-        <p class="bio">
-            Creative Coder & Digital Architect. <br>
-            Manifesting aesthetics through clean code and neon dreams.
-        </p>
-        <div class="links">
-            <a href="#" class="btn">Portfolio</a>
-            <a href="#" class="btn">GitHub</a>
-            <a href="#contact" class="btn">Contact</a>
-        </div>
 
-        <div id="contact" class="contact-section">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <div class="form-group">
-                    <input type="text" id="name" name="name" placeholder="YOUR NAME" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="YOUR EMAIL" required>
-                </div>
-                <div class="form-group">
-                    <textarea id="message" name="message" placeholder="YOUR MESSAGE" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn submit-btn">Send Message</button>
-            </form>
+<body>
+    <header class="header" id="main-header">
+        <div class="header-container">
+            <div class="logo"><span class="logo-icon">📊</span><span class="logo-text">Wealth<span
+                        class="logo-accent">Wise</span></span></div>
+            <nav class="main-nav" id="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#main-header" class="nav-link active">Home</a></li>
+                    <li><a href="#market-snapshot" class="nav-link">Markets</a></li>
+                    <li><a href="#articles-grid" class="nav-link">Investing</a></li>
+                    <li><a href="#newsletter" class="nav-link">Budgeting</a></li>
+                    <li><a href="#about-expert" class="nav-link">Retirement</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn-subscribe" id="subscribe-btn">Subscribe</button>
+                <button class="mobile-menu-btn" id="mobile-menu-btn"
+                    aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="news-ticker" id="news-ticker">
+        <div class="ticker-label"><span class="ticker-icon">🔴</span><span>BREAKING BUDGET NEWS</span></div>
+        <div class="ticker-wrapper">
+            <div class="ticker-content" id="ticker-content">
+                <span class="ticker-item">📈 S&P 500 hits new all-time high, crossing 5,200 points</span><span
+                    class="ticker-separator">•</span>
+                <span class="ticker-item">💰 Federal Reserve holds rates steady at 5.25-5.50%</span><span
+                    class="ticker-separator">•</span>
+                <span class="ticker-item">🏠 Housing market shows signs of cooling</span><span
+                    class="ticker-separator">•</span>
+                <span class="ticker-item">💎 Gold prices surge past $2,100</span><span class="ticker-separator">•</span>
+                <span class="ticker-item">📊 Tech stocks lead market rally with 3.2% gains</span><span
+                    class="ticker-separator">•</span>
+            </div>
         </div>
     </div>
+
+    <main class="main-layout">
+        <div class="content-wrapper">
+            <section class="main-content" id="main-content">
+                <article class="featured-article" id="featured-article">
+                    <div class="article-badge">Featured Analysis</div>
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&h=600&fit=crop"
+                            alt="Stock market analysis" loading="eager">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta"><span class="category">Investment Strategy</span><span
+                                class="date">February 2, 2026</span><span class="read-time">8 min read</span></div>
+                        <h1 class="article-title">2026 Investment Outlook: Navigating Market Volatility with Strategic
+                            Asset Allocation</h1>
+                        <p class="article-excerpt">As we enter a new era of market dynamics, understanding the interplay
+                            between traditional equities and emerging asset classes becomes crucial...</p>
+                        <a href="#" class="read-more-btn">Read Full Analysis →</a>
+                    </div>
+                </article>
+
+                <div class="articles-section">
+                    <h2 class="section-title"><span class="title-icon">📰</span>Latest Investment Insights</h2>
+                    <div class="articles-grid" id="articles-grid">
+                        <article class="article-card">
+                            <div class="card-image"><img
+                                    src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=600&h=400&fit=crop"
+                                    alt="Portfolio management"><span class="card-category">Portfolio</span></div>
+                            <div class="card-content">
+                                <h3>Building a Recession-Proof Portfolio</h3>
+                                <p>Learn defensive strategies for 2026.</p>
+                                <div class="card-footer"><span class="author">Sarah Chen, CFA</span><span
+                                        class="read-time">6 min</span></div>
+                            </div>
+                        </article>
+                        <article class="article-card">
+                            <div class="card-image"><img
+                                    src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=600&h=400&fit=crop"
+                                    alt="Cryptocurrency"><span class="card-category">Crypto</span></div>
+                            <div class="card-content">
+                                <h3>Bitcoin Post-Halving Performance</h3>
+                                <p>Historical data and projections.</p>
+                                <div class="card-footer"><span class="author">Marcus Williams</span><span
+                                        class="read-time">5 min</span></div>
+                            </div>
+                        </article>
+                        <article class="article-card">
+                            <div class="card-image"><img
+                                    src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=600&h=400&fit=crop"
+                                    alt="Real estate"><span class="card-category">Real Estate</span></div>
+                            <div class="card-content">
+                                <h3>REITs vs Direct Property Investment</h3>
+                                <p>Comparing returns and liquidity.</p>
+                                <div class="card-footer"><span class="author">Jennifer Park</span><span
+                                        class="read-time">7 min</span></div>
+                            </div>
+                        </article>
+                        <article class="article-card">
+                            <div class="card-image"><img
+                                    src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop"
+                                    alt="Retirement"><span class="card-category">Retirement</span></div>
+                            <div class="card-content">
+                                <h3>Maximizing Your 401(k)</h3>
+                                <p>Strategies for every career stage.</p>
+                                <div class="card-footer"><span class="author">David Rodriguez, CFP</span><span
+                                        class="read-time">8 min</span></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="market-snapshot" id="market-snapshot">
+                    <h2 class="section-title"><span class="title-icon">📊</span>Market Snapshot</h2>
+                    <div class="market-cards">
+                        <div class="market-card positive">
+                            <div class="market-name">S&P 500</div>
+                            <div class="market-value">5,234.18</div>
+                            <div class="market-change">+1.23%</div>
+                        </div>
+                        <div class="market-card positive">
+                            <div class="market-name">NASDAQ</div>
+                            <div class="market-value">16,742.39</div>
+                            <div class="market-change">+1.87%</div>
+                        </div>
+                        <div class="market-card negative">
+                            <div class="market-name">DOW 30</div>
+                            <div class="market-value">38,654.42</div>
+                            <div class="market-change">-0.34%</div>
+                        </div>
+                        <div class="market-card positive">
+                            <div class="market-name">Bitcoin</div>
+                            <div class="market-value">$67,432</div>
+                            <div class="market-change">+4.21%</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="sidebar" id="sidebar">
+                <div class="sidebar-widget newsletter-widget" id="newsletter">
+                    <div class="widget-header"><span class="widget-icon">✉️</span>
+                        <h3>Weekly Digest</h3>
+                    </div>
+                    <p>Get exclusive investment insights delivered to your inbox.</p>
+                    <!-- Newsletter Form - Replace action URL with your email service endpoint -->
+                    <form class="newsletter-form" id="newsletter-form" method="POST"
+                        action="https://your-email-service.com/api/subscribe">
+                        <input type="email" name="email" placeholder="Enter your email" required autocomplete="email">
+                        <!-- Honeypot field for spam protection -->
+                        <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+                        <input type="hidden" name="source" value="wealthwise-sidebar">
+                        <button type="submit" name="subscribe">Subscribe Free</button>
+                    </form>
+                    <span class="privacy-note">🔒 No spam. Unsubscribe anytime.</span>
+                </div>
+                <!-- Google AdSense Unit 1: Sidebar Rectangle 300x250 -->
+                <div class="sidebar-widget ad-widget" id="adsense-unit-1">
+                    <div class="ad-label">Advertisement</div>
+                    <ins class="adsbygoogle" style="display:block; min-height:250px;"
+                        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1234567890" data-ad-format="rectangle"
+                        data-full-width-responsive="true"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                </div>
+                <div class="sidebar-widget popular-widget">
+                    <h3 class="widget-title">🔥 Trending This Week</h3>
+                    <ul class="popular-list">
+                        <li class="popular-item"><span class="popular-rank">01</span>
+                            <div class="popular-content"><a href="#">How I Turned $10K Into $100K</a><span
+                                    class="popular-views">24.5K views</span></div>
+                        </li>
+                        <li class="popular-item"><span class="popular-rank">02</span>
+                            <div class="popular-content"><a href="#">The 50/30/20 Budget Rule</a><span
+                                    class="popular-views">18.2K views</span></div>
+                        </li>
+                        <li class="popular-item"><span class="popular-rank">03</span>
+                            <div class="popular-content"><a href="#">5 Dividend Stocks for Income</a><span
+                                    class="popular-views">15.8K views</span></div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Google AdSense Unit 2: Sidebar Vertical 300x600 -->
+                <div class="sidebar-widget ad-widget" id="adsense-unit-2">
+                    <div class="ad-label">Advertisement</div>
+                    <ins class="adsbygoogle" style="display:block; min-height:600px;"
+                        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="0987654321" data-ad-format="vertical"
+                        data-full-width-responsive="true"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                </div>
+                <div class="sidebar-widget categories-widget">
+                    <h3 class="widget-title">📁 Categories</h3>
+                    <div class="categories-list"><a href="#" class="category-tag">Investing</a><a href="#"
+                            class="category-tag">Budgeting</a><a href="#" class="category-tag">Retirement</a><a href="#"
+                            class="category-tag">Crypto</a><a href="#" class="category-tag">Taxes</a></div>
+                </div>
+                <!-- Google AdSense Unit 3: Sidebar Large 336x280 (Sticky) -->
+                <div class="sidebar-widget ad-widget sticky-ad" id="adsense-unit-3">
+                    <div class="ad-label">Advertisement</div>
+                    <ins class="adsbygoogle" style="display:block; min-height:280px;"
+                        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1122334455" data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <section class="expert-section" id="about-expert">
+        <div class="expert-container">
+            <div class="section-header">
+                <h2 class="expert-title"><span class="title-icon">👨‍💼</span>Meet Our Financial Experts</h2>
+                <p class="expert-subtitle">Trusted advice from certified professionals</p>
+            </div>
+            <div class="experts-grid">
+                <div class="expert-card lead-expert">
+                    <div class="expert-image-wrapper"><img
+                            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face"
+                            alt="Dr. Michael Sterling" class="expert-image">
+                        <div class="expert-badge">Lead Analyst</div>
+                    </div>
+                    <div class="expert-info">
+                        <h3 class="expert-name">Dr. Michael Sterling, CFA, CFP®</h3>
+                        <p class="expert-role">Chief Financial Analyst & Founder</p>
+                        <div class="expert-credentials"><span class="credential">📜 Ph.D. in Finance, MIT</span><span
+                                class="credential">🏆 CFA Charterholder since 2008</span><span class="credential">📊 15+
+                                years on Wall Street</span><span class="credential">📺 Featured on CNBC,
+                                Bloomberg</span></div>
+                        <p class="expert-bio">Dr. Sterling has managed portfolios exceeding $500 million and has been
+                            recognized by Forbes as one of the top 50 financial advisors in America.</p>
+                        <div class="expert-social"><a href="#" class="social-link">in</a><a href="#"
+                                class="social-link">𝕏</a><a href="#" class="social-link">▶</a></div>
+                    </div>
+                </div>
+                <div class="expert-card"><img
+                        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&crop=face"
+                        alt="Sarah Chen" class="expert-image small">
+                    <div class="expert-info">
+                        <h3 class="expert-name">Sarah Chen, CFA</h3>
+                        <p class="expert-role">Senior Investment Strategist</p>
+                        <div class="expert-credentials compact"><span class="credential">MBA, Wharton</span><span
+                                class="credential">12 years exp</span></div>
+                    </div>
+                </div>
+                <div class="expert-card"><img
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face"
+                        alt="David Rodriguez" class="expert-image small">
+                    <div class="expert-info">
+                        <h3 class="expert-name">David Rodriguez, CFP®</h3>
+                        <p class="expert-role">Retirement Planning Specialist</p>
+                        <div class="expert-credentials compact"><span class="credential">RICP® Designation</span><span
+                                class="credential">18 years exp</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="trust-indicators">
+                <div class="trust-item"><span class="trust-number">2.5M+</span><span class="trust-label">Monthly
+                        Readers</span></div>
+                <div class="trust-item"><span class="trust-number">15+</span><span class="trust-label">Years of
+                        Expertise</span></div>
+                <div class="trust-item"><span class="trust-number">500+</span><span class="trust-label">Research
+                        Articles</span></div>
+                <div class="trust-item"><span class="trust-number">50+</span><span class="trust-label">Industry
+                        Awards</span></div>
+            </div>
+            <div class="editorial-standards">
+                <h3>📋 Our Editorial Standards</h3>
+                <div class="standards-grid">
+                    <div class="standard-item"><span class="standard-icon">✓</span>
+                        <div><strong>Fact-Checked</strong>
+                            <p>Rigorous fact-checking by our research team</p>
+                        </div>
+                    </div>
+                    <div class="standard-item"><span class="standard-icon">✓</span>
+                        <div><strong>Expert-Reviewed</strong>
+                            <p>Content reviewed by certified professionals</p>
+                        </div>
+                    </div>
+                    <div class="standard-item"><span class="standard-icon">✓</span>
+                        <div><strong>Regularly Updated</strong>
+                            <p>Reflects current market conditions</p>
+                        </div>
+                    </div>
+                    <div class="standard-item"><span class="standard-icon">✓</span>
+                        <div><strong>Transparent</strong>
+                            <p>Clear affiliate and sponsorship disclosures</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="main-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo"><span class="logo-icon">📊</span><span class="logo-text">Wealth<span
+                                class="logo-accent">Wise</span></span></div>
+                    <p class="footer-tagline">Empowering your financial journey.</p>
+                    <div class="footer-social"><a href="#">f</a><a href="#">𝕏</a><a href="#">in</a><a href="#">▶</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Advertise</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Investment Guides</a></li>
+                        <li><a href="#">Budget Templates</a></li>
+                        <li><a href="#">Calculators</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="disclaimer"><strong>Disclaimer:</strong> Information provided is for educational purposes
+                    only. Consult a qualified advisor before making investment decisions.</p>
+                <p class="copyright">© 2026 WealthWise. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>
